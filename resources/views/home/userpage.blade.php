@@ -54,46 +54,10 @@
         <span class="subheading">Welcome to Tutor Hire</span>
         <h1 class="mb-4">We Are An Online Platform For Finding You The Best Tutor</h1>
         <p class="caps">Find the best tutors for your subject around you! Explore the most talented people who can teach you your desired knowledge.</p>
-        <p class="mb-0"><a href="#" class="btn btn-primary">Our Tutors</a> <a href="#" class="btn btn-white">Learn More</a></p>
     </div>
 </div>
 </div>
 </div>
-
-<section class="ftco-section ftco-no-pb ftco-no-pt">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-7"></div>
-         <div class="col-md-5 order-md-last">
-          <div class="login-wrap p-4 p-md-5">
-              <h3 class="mb-4">Register Now</h3>
-              <form action="#" class="signup-form">
-                 <div class="form-group">
-                    <label class="label" for="name">Full Name</label>
-                    <input type="text" class="form-control" placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label class="label" for="email">Email Address</label>
-                    <input type="text" class="form-control" placeholder="johndoe@gmail.com">
-                </div>
-                <div class="form-group">
-                 <label class="label" for="password">Password</label>
-                 <input id="password-field" type="password" class="form-control" placeholder="Password">
-             </div>
-             <div class="form-group">
-                 <label class="label" for="password">Confirm Password</label>
-                 <input id="password-field" type="password" class="form-control" placeholder="Confirm Password">
-             </div>
-             <div class="form-group d-flex justify-content-end mt-4">
-                 <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button>
-             </div>
-         </form>
-         <p class="text-center">Already have an account? <a href="#signin">Sign In</a></p>
-     </div>
- </div>
-</div>
-</div>
-</section>
 
 <section class="ftco-section">
    <div class="container">
@@ -163,104 +127,30 @@
    <div class="container">
       <div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
-          	<span class="subheading">Start Learning Today</span>
-            <h2 class="mb-4">Pick Your Instructor</h2>
+          	<span class="subheading">Get Yourself a Tutor</span>
+            <h2 class="mb-4">Pick Your Courses</h2>
         </div>
-    </div>
+      </div>
     <div class="row">
+        @foreach($course as $course)
        <div class="col-md-4 ftco-animate">
           <div class="project-wrap">
-             <a href="#" class="img" style="background-image: url(images/work-1.jpg);">
-                <span class="price">Software</span>
+             <a href="#" class="img" style="background-image: url(course/{{$course->image}});">
+                <span class="price">{{$course->category}}</span>
             </a>
             <div class="text p-4">
-                <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-                <p class="advisor">Advisor <span>Tony Garret</span></p>
+                <h3><a href="#">{{$course->title}}</a></h3>
+                <p class="advisor">Time: <span>{{$course->time}}</span></p>
                 <ul class="d-flex justify-content-between">
-                   <li><span class="flaticon-shower"></span>2300</li>
-                   <li class="price">$199</li>
+                   <li><span class="flaticon-shower"></span>{{$course->grade}}</li>
+                   <li class="price">{{$course->fee}} BDT</li>
                </ul>
-           </div>
+            </div>
+          </div>
        </div>
    </div>
-   <div class="col-md-4 ftco-animate">
-      <div class="project-wrap">
-         <a href="#" class="img" style="background-image: url(images/work-2.jpg);">
-            <span class="price">Software</span>
-        </a>
-        <div class="text p-4">
-            <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-            <p class="advisor">Advisor <span>Tony Garret</span></p>
-            <ul class="d-flex justify-content-between">
-               <li><span class="flaticon-shower"></span>2300</li>
-               <li class="price">$199</li>
-           </ul>
-       </div>
+   @endforeach
    </div>
-</div>
-<div class="col-md-4 ftco-animate">
-  <div class="project-wrap">
-     <a href="#" class="img" style="background-image: url(images/work-3.jpg);">
-        <span class="price">Software</span>
-    </a>
-    <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
-   </div>
-</div>
-</div>
-
-<div class="col-md-4 ftco-animate">
-  <div class="project-wrap">
-     <a href="#" class="img" style="background-image: url(images/work-4.jpg);">
-        <span class="price">Software</span>
-    </a>
-    <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
-   </div>
-</div>
-</div>
-<div class="col-md-4 ftco-animate">
-  <div class="project-wrap">
-     <a href="#" class="img" style="background-image: url(images/work-5.jpg);">
-        <span class="price">Software</span>
-    </a>
-    <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
-   </div>
-</div>
-</div>
-<div class="col-md-4 ftco-animate">
-  <div class="project-wrap">
-     <a href="#" class="img" style="background-image: url(images/work-6.jpg);">
-        <span class="price">Software</span>
-    </a>
-    <div class="text p-4">
-        <h3><a href="#">Design for the web with adobe photoshop</a></h3>
-        <p class="advisor">Advisor <span>Tony Garret</span></p>
-        <ul class="d-flex justify-content-between">
-           <li><span class="flaticon-shower"></span>2300</li>
-           <li class="price">$199</li>
-       </ul>
-   </div>
-</div>
-</div>
-</div>
-</div>
 </section>
 
 <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
@@ -337,130 +227,6 @@
 </section>
 
 
-<section class="ftco-section testimony-section bg-light">
-   <div class="overlay" style="background-image: url(images/bg_2.jpg);"></div>
-   <div class="container">
-    <div class="row pb-4">
-      <div class="col-md-7 heading-section ftco-animate">
-         <span class="subheading">Testimonial</span>
-         <h2 class="mb-4">What Are Students Says</h2>
-     </div>
- </div>
-</div>
-<div class="container container-2">
-    <div class="row ftco-animate">
-      <div class="col-md-12">
-        <div class="carousel-testimony owl-carousel">
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">
-                 <p class="star">
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </p>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center">
-                   <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                   <div class="pl-3">
-                      <p class="name">Roger Scott</p>
-                      <span class="position">Marketing Manager</span>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="item">
-    <div class="testimony-wrap py-4">
-      <div class="text">
-         <p class="star">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-        <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-           <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
-          </div>
-      </div>
-  </div>
-</div>
-</div>
-<div class="item">
-    <div class="testimony-wrap py-4">
-      <div class="text">
-         <p class="star">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-        <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-           <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
-          </div>
-      </div>
-  </div>
-</div>
-</div>
-<div class="item">
-    <div class="testimony-wrap py-4">
-      <div class="text">
-         <p class="star">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-        <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-           <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
-          </div>
-      </div>
-  </div>
-</div>
-</div>
-<div class="item">
-    <div class="testimony-wrap py-4">
-      <div class="text">
-         <p class="star">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-        <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-           <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
-          </div>
-      </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
 <section class="ftco-intro ftco-section ftco-no-pb">
  <div class="container">
@@ -469,8 +235,8 @@
           <div class="img"  style="background-image: url(images/bg_4.jpg);">
              <div class="overlay"></div>
              <h2>We Are Tutor Hire, An Online Platform For Finding the best Tutors</h2>
-             <p>We can manage your preferred topics to be taught by best teachers</p>
-             <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Enroll Now</a></p>
+             <p>We can manage your preferred courses taught by the best teachers</p>
+             <p class="mb-0"><a href="{{ route('register') }}" class="btn btn-primary px-4 py-3">Enroll Now</a></p>
          </div>
      </div>
  </div>
@@ -532,75 +298,6 @@
   </div>
 </div>      
 </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<section class="ftco-section bg-light">
-  <div class="container">
-     <div class="row justify-content-center pb-4">
-      <div class="col-md-12 heading-section text-center ftco-animate">
-         <span class="subheading">Our Blog</span>
-         <h2 class="mb-4">Recent Post</h2>
-     </div>
- </div>
- <div class="row d-flex">
-  <div class="col-lg-4 ftco-animate">
-    <div class="blog-entry">
-      <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-      </a>
-      <div class="text d-block">
-         <div class="meta">
-          <p>
-             <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 17, 2020</a>
-             <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>
-             <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>
-         </p>
-     </div>
-     <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>
-     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-     <p><a href="blog.html" class="btn btn-secondary py-2 px-3">Read more</a></p>
- </div>
-</div>
-</div>
-
-<div class="col-lg-4 ftco-animate">
-    <div class="blog-entry">
-      <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-      </a>
-      <div class="text d-block">
-         <div class="meta">
-          <p>
-             <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 17, 2020</a>
-             <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>
-             <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>
-         </p>
-     </div>
-     <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>
-     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-     <p><a href="blog.html" class="btn btn-secondary py-2 px-3">Read more</a></p>
- </div>
-</div>
-</div>
-<div class="col-lg-4 ftco-animate">
-    <div class="blog-entry">
-      <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-      </a>
-      <div class="text d-block">
-         <div class="meta">
-          <p>
-             <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 17, 2020</a>
-             <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>
-             <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>
-         </p>
-     </div>
-     <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>
-     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-     <p><a href="blog.html" class="btn btn-secondary py-2 px-3">Read more</a></p>
- </div>
 </div>
 </div>
 </div>

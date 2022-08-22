@@ -21,12 +21,42 @@
 
             <div class="mt-4">
                 <x-jet-label for="phone" value="{{ __('Phone') }}" />
-                <x-jet-input id="phone" class="block mt-1 w-full" type="number" name="phone" :value="old('email')" required />
+                <x-jet-input id="phone" class="block mt-1 w-full" type="number" name="phone" :value="old('phone')" required />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="address" value="{{ __('Address') }}" />
-                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('email')" required />
+                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="profession" value="{{ __('Profession') }}" />
+                <x-jet-input id="profession" class="block mt-1 w-full" type="text" name="profession" :value="old('profession')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="institution" value="{{ __('Institution') }}" />
+                <x-jet-input id="institution" class="block mt-1 w-full" type="text" name="institution" :value="old('institution')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="department" value="{{ __('Department') }}" />
+                <x-jet-input id="department" class="block mt-1 w-full" type="text" name="department" :value="old('department')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="grade" value="{{ __('Grade') }}" />
+                <x-jet-input id="grade" class="block mt-1 w-full" type="float" name="grade" :value="old('grade')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="usertype" value="{{ __('Register as Student') }}" />
+                <x-jet-input id="usertype" class="" type="radio" name="usertype" :value="0" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="usertype" value="{{ __('Register as Tutor') }}" />
+                <x-jet-input id="usertype" class="" type="radio" name="usertype" :value="1" required />
             </div>
 
             <div class="mt-4">
