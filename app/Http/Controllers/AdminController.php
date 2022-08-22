@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -92,4 +93,20 @@ class AdminController extends Controller
         $course->save();
         return redirect()->back()->with('message','Course Updated Successfully');
     }
+
+    public function transaction()
+    {
+        $transaction=order::all();
+        return view('admin.transaction',compact('transaction'));
+    }
+    
+    public function amIPaid($id)
+    {
+        $transaction = order::find($id);
+        $transaction->payment_status="Paid";
+        $transaction->save();
+        return redirect()->back();
+
+    }
 }
+

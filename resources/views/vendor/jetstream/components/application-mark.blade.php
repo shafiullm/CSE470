@@ -1,0 +1,1 @@
+<img src="{{asset('/images/tutorHire-b.png')}}" style="width:256px;">
